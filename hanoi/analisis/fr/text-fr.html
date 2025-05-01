@@ -1,0 +1,34 @@
+<div id ="contenedor1" class= "removible">  
+  <div id ="info" class= "cont-formulario">
+    <?php
+      echo "<p> <strong>Bienvenue $nombre</strong></p>";
+    ?>
+
+    <p>L'objectif du jeu est de passer tous les disques à la tour de droite (T3).</p>
+    <img src="../imagenes/hanoi_res.png" width="100%">
+    <p><strong>Afin d'atteindre l'objectif, vous devez suivre 3 règles :</strong></p>
+    <ol style="text-align: justify;">
+      <li>Vous ne pouvez déplacer qu'un seul disque à la fois.</li>
+      <li>Un disque ne peut pas être placé sur un plus petit.</li>
+      <li>Vous ne pouvez déplacer que le disque supérieur de chaque tour.</li>
+    </ol>
+
+    <?php
+      if($_SESSION['ind_grafo'] == true)
+      {
+
+        echo(" <p> Le graphique de droite reflète vos mouvements, surveillez-le attentivement chaque fois que vous déplacez un disque. Le but du jeu est atteint si vous atteignez le coin supérieur droit du graphique.</p>"); 
+
+      }
+
+
+      if($_SESSION['ind_agente'] == true)
+      {
+        echo "<p> L'agent ci-dessous à droite vous aidera afin que vous puissiez le résoudre de la meilleure façon.</p>";
+      }
+
+    ?>
+
+    <button id ="enviar" onclick="destroy();escuchar();">Jouer</button>
+  </div>
+</div>

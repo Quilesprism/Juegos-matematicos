@@ -1,0 +1,17 @@
+body{
+background-color: rgb(223, 220, 227);
+width: 100vw;
+height: 100vh;
+overflow: hidden;
+
+}
+.p5Canvas{
+
+	position: absolute ;
+	left: 25vw;
+
+
+}
+
+
+

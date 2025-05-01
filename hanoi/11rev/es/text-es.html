@@ -1,0 +1,33 @@
+    <div id ="contenedor1" class= "removible pop_up">  
+      <div id ="info" class= "cont-formulario">
+        <?php
+          echo "<p> <strong>Bienvenido $nombre</strong></p>";
+        ?>
+        <p>El objetivo del juego es pasar todos los discos a la torre de la derecha (T3).</p>
+        <img src="../imagenes/hanoi_res.png" width="100%">
+        <p><strong>Para realizar este objetivo es necesario seguir tres reglas:</strong></p>
+        <ol style="text-align: justify;" id ="indicaciones">
+          <li>Solo se puede mover un disco cada vez.</li>
+          <li>Un disco de mayor tamaño no puede estar sobre uno más pequeño que él mismo.</li>
+          <li>Solo se puede desplazar el disco que se encuentre arriba en cada torre.</li>
+        </ol>
+
+        <?php
+          if($_SESSION['ind_grafo'] == true)
+          {
+            
+              echo("El grafo de la derecha refleja tus jugadas, observalo con atención cada vez que muevas un disco. El obejtivo del juego se cumple si llegas a la esquina superior derecha del grafo."); 
+            
+          }
+          
+
+          if($_SESSION['ind_agente'] == true)
+          {
+            echo "<p> El agente de abajo a la derecha te ayudará para que puedas resolverlo de la mejor manera.</p>";
+          }
+
+        ?>
+
+        <button id ="enviar" onclick="destroy();escuchar();">JUGAR</button>
+      </div>
+    </div>

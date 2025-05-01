@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<title>Acceso a Hanoi</title>
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="es/imagenes/icono.png" sizes="64x64">
+<link rel="stylesheet" type="text/css" href= "css/estilo.css" >
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js" integrity="sha512-WIklPM6qPCIp6d3fSSr90j+1unQHUOoWDS4sdTiR8gxUTnyZ8S2Mr8e10sKKJ/bhJgpAa/qG068RDkg6fIlNFA==" crossorigin="anonymous"></script>  <!-- para usar P5JS desde el repo ONLINE -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>   <!-- para usar JQUERY desde repo ONLINE -->
+<script language="javascript" type="text/javascript" src="scripts/sincronia.js"></script>  <!-- mis scripts JS -->
+<style>
+	body {font-family: "Lato", sans-serif}
+</style>
+<body>
+	<div id= "contenedor1">
+
+		<div id = "cont-formulario" class="cont-formulario">
+			<a href="es/index.html"><h2>Bienvenido</br> 🇪🇸</br>Jugar</h2></a>
+			<hr> </hr>
+			<a href="fr/index.html"><h2>Bienvenue</br> 🇫🇷</br>Jouer le jeu</h2></a>
+			<hr> </hr>
+			<a href="en/index.html"><h2>Welcome</br>🇬🇧</br>Play now</h2></a>
+
+			
+
+				</div>
+
+
+
+				<div id = "cont-formulario-registro" class="cont-formulario hidden">
+			<h2>Bienvenid@ </br> llena tus datos para jugar</h2>
+			<form action="../servicios/insercion_Usuarios.php" method="post">
+				<p>Nombre </br>
+					<input type="text" name="nombre" required placeholder= "Escribe tu nombre"></p>
+					<p>Apellido </br> <input type="text" name="Escribe tu apellido" required placeholder="Apellido"></p>
+					<p>Edad </br> <select  required name="edad"> 
+						<option value = ""> Selecciona </option>
+						<option value = "1"> 1 año </option>
+						<option value = "2"> 2 años </option>
+						<option value = "3"> 3 años </option>
+						<option value = "4"> 4 años </option>
+						<option value = "5"> 5 años </option>
+						<option value = "6"> 6 años </option>
+						<option value = "7"> 7 años </option>
+						<option value = "8"> 8 años </option>
+						<option value = "9"> 9 años </option>
+						<option value = "10"> 10 años </option>
+						<option value = "11"> 11 años </option>
+						<option value = "12"> 12 años </option>
+						<option value = "13"> 13 años </option>
+						<option value = "14"> 14 años </option>
+						<option value = "15"> 15 años </option>
+						<option value = "16"> 16 años </option>
+						<option value = "17"> 17 años </option>
+						<option value = "18"> 18 años </option>
+						<option value = "19"> 19 años </option>
+						<option value = "20"> 20 años </option>
+						<option value = "21"> 21 años </option>
+						<option value = "22"> 22 años </option>
+						<option value = "23"> 23 años </option>
+						<option value = "24"> 24 años </option>
+						<option value = "25"> 25 años </option>
+						<option value = "26"> 26 años </option>
+						<option value = "27"> 27 años </option>
+						<option value = "28"> 28 años </option>
+						<option value = "29"> 29 años </option>
+						<option value = "30"> 30 años </option>
+						<option value = "31"> 31 años </option>
+						<option value = "32"> 32 años </option>
+						<option value = "33"> 33 años </option>
+						<option value = "34"> 34 años </option>
+						<option value = "35"> 35 años </option>
+						<option value = "36"> 36 años </option>
+						<option value = "37"> 37 años </option>
+						<option value = "38"> 38 años </option>
+						<option value = "39"> 39 años </option>
+						<option value = "40"> 40 años </option>
+						<option value = "41"> 41 años </option>
+						<option value = "42"> 42 años </option>
+						<option value = "43"> 43 años </option>
+						<option value = "44"> 44 años </option>
+						<option value = "45"> 45 años </option>
+						<option value = "46"> 46 años </option>
+						<option value = "47"> 47 años </option>
+						<option value = "48"> 48 años </option>
+						<option value = "49"> 49 años </option>
+						<option value = "50"> 50 años </option>
+						<option value = "51"> 51 años </option>
+						<option value = "52"> 52 años </option>
+						<option value = "53"> 53 años </option>
+						<option value = "54"> 54 años </option>
+						<option value = "55"> 55 años </option>
+						<option value = "56"> 56 años </option>
+						<option value = "57"> 57 años </option>
+						<option value = "58"> 58 años </option>
+						<option value = "59"> 59 años </option>
+						<option value = "60"> 60 años </option>
+						<option value = "61"> 61 años </option>
+						<option value = "62"> 62 años </option>
+						<option value = "63"> 63 años </option>
+						<option value = "64"> 64 años </option>
+						<option value = "65"> 65 años </option>
+						<option value = "66"> 66 años </option>
+						<option value = "67"> 67 años </option>
+						<option value = "68"> 68 años </option>
+						<option value = "69"> 69 años </option>
+						<option value = "70"> 70 años </option>
+						<option value = "71"> 71 años </option>
+						<option value = "72"> 72 años </option>
+						<option value = "73"> 73 años </option>
+						<option value = "74"> 74 años </option>
+						<option value = "75"> 75 años </option>
+						<option value = "76"> 76 años </option>
+						<option value = "77"> 77 años </option>
+						<option value = "78"> 78 años </option>
+						<option value = "79"> 79 años </option>
+						<option value = "80"> 80 años </option>
+						<option value = "81"> 81 años </option>
+						<option value = "82"> 82 años </option>
+						<option value = "83"> 83 años </option>
+						<option value = "84"> 84 años </option>
+						<option value = "85"> 85 años </option>
+						<option value = "86"> 86 años </option>
+						<option value = "87"> 87 años </option>
+						<option value = "88"> 88 años </option>
+						<option value = "89"> 89 años </option>
+						<option value = "90"> 90 años </option>
+						<option value = "91"> 91 años </option>
+						<option value = "92"> 92 años </option>
+						<option value = "93"> 93 años </option>
+						<option value = "94"> 94 años </option>
+						<option value = "95"> 95 años </option>
+						<option value = "96"> 96 años </option>
+						<option value = "97"> 97 años </option>
+						<option value = "98"> 98 años </option>
+						<option value = "99"> 99 años </option>
+
+					</select></p>
+
+					<p>Nombre de tu profe </br> <input type="text" name="profe" required placeholder="Nombre de tu profe"></p>
+						<p>
+							<input type="submit" value="Jugar" id="enviar"> </p>
+							<!-- <input type="reset" value="Borrar" id = "borrar"> -->
+							<p>
+								<input type="button" hidden="hidden" value="Click me" onclick="aja();">
+							</p>
+						
+					</form>
+				</div>
+
+<div id = "cont-formulario-login" class="cont-formulario hidden">
+			<h2>Bienvenid@ </br> llena tus datos para jugar</h2>
+			<form action="http://met2020.000webhostapp.com/servicios/insercion_Usuarios.php" method="post">
+				<p>Nombre </br>
+					<input type="text" name="nombre" required placeholder= "Escribe tu nombre"></p>
+					<p>Apellido </br> <input type="text" name="Escribe tu apellido" required placeholder="Apellido"></p>
+					<p>Edad </br> <select  required name="edad"> 
+						<option value = ""> Selecciona </option>
+						<option value = "1"> 1 año </option>
+						<option value = "2"> 2 años </option>
+						<option value = "3"> 3 años </option>
+						<option value = "4"> 4 años </option>
+						<option value = "5"> 5 años </option>
+						<option value = "6"> 6 años </option>
+						<option value = "7"> 7 años </option>
+						<option value = "8"> 8 años </option>
+						<option value = "9"> 9 años </option>
+						<option value = "10"> 10 años </option>
+						<option value = "11"> 11 años </option>
+						<option value = "12"> 12 años </option>
+						<option value = "13"> 13 años </option>
+						<option value = "14"> 14 años </option>
+						<option value = "15"> 15 años </option>
+						<option value = "16"> 16 años </option>
+						<option value = "17"> 17 años </option>
+						<option value = "18"> 18 años </option>
+						<option value = "19"> 19 años </option>
+						<option value = "20"> 20 años </option>
+						<option value = "21"> 21 años </option>
+						<option value = "22"> 22 años </option>
+						<option value = "23"> 23 años </option>
+						<option value = "24"> 24 años </option>
+						<option value = "25"> 25 años </option>
+						<option value = "26"> 26 años </option>
+						<option value = "27"> 27 años </option>
+						<option value = "28"> 28 años </option>
+						<option value = "29"> 29 años </option>
+						<option value = "30"> 30 años </option>
+						<option value = "31"> 31 años </option>
+						<option value = "32"> 32 años </option>
+						<option value = "33"> 33 años </option>
+						<option value = "34"> 34 años </option>
+						<option value = "35"> 35 años </option>
+						<option value = "36"> 36 años </option>
+						<option value = "37"> 37 años </option>
+						<option value = "38"> 38 años </option>
+						<option value = "39"> 39 años </option>
+						<option value = "40"> 40 años </option>
+						<option value = "41"> 41 años </option>
+						<option value = "42"> 42 años </option>
+						<option value = "43"> 43 años </option>
+						<option value = "44"> 44 años </option>
+						<option value = "45"> 45 años </option>
+						<option value = "46"> 46 años </option>
+						<option value = "47"> 47 años </option>
+						<option value = "48"> 48 años </option>
+						<option value = "49"> 49 años </option>
+						<option value = "50"> 50 años </option>
+						<option value = "51"> 51 años </option>
+						<option value = "52"> 52 años </option>
+						<option value = "53"> 53 años </option>
+						<option value = "54"> 54 años </option>
+						<option value = "55"> 55 años </option>
+						<option value = "56"> 56 años </option>
+						<option value = "57"> 57 años </option>
+						<option value = "58"> 58 años </option>
+						<option value = "59"> 59 años </option>
+						<option value = "60"> 60 años </option>
+						<option value = "61"> 61 años </option>
+						<option value = "62"> 62 años </option>
+						<option value = "63"> 63 años </option>
+						<option value = "64"> 64 años </option>
+						<option value = "65"> 65 años </option>
+						<option value = "66"> 66 años </option>
+						<option value = "67"> 67 años </option>
+						<option value = "68"> 68 años </option>
+						<option value = "69"> 69 años </option>
+						<option value = "70"> 70 años </option>
+						<option value = "71"> 71 años </option>
+						<option value = "72"> 72 años </option>
+						<option value = "73"> 73 años </option>
+						<option value = "74"> 74 años </option>
+						<option value = "75"> 75 años </option>
+						<option value = "76"> 76 años </option>
+						<option value = "77"> 77 años </option>
+						<option value = "78"> 78 años </option>
+						<option value = "79"> 79 años </option>
+						<option value = "80"> 80 años </option>
+						<option value = "81"> 81 años </option>
+						<option value = "82"> 82 años </option>
+						<option value = "83"> 83 años </option>
+						<option value = "84"> 84 años </option>
+						<option value = "85"> 85 años </option>
+						<option value = "86"> 86 años </option>
+						<option value = "87"> 87 años </option>
+						<option value = "88"> 88 años </option>
+						<option value = "89"> 89 años </option>
+						<option value = "90"> 90 años </option>
+						<option value = "91"> 91 años </option>
+						<option value = "92"> 92 años </option>
+						<option value = "93"> 93 años </option>
+						<option value = "94"> 94 años </option>
+						<option value = "95"> 95 años </option>
+						<option value = "96"> 96 años </option>
+						<option value = "97"> 97 años </option>
+						<option value = "98"> 98 años </option>
+						<option value = "99"> 99 años </option>
+
+					</select></p>
+
+					<p>Nombre de tu profe </br> <input type="text" name="profe" required placeholder="Nombre de tu profe"></p>
+						<p>
+							<input type="submit" value="Jugar" id="enviar"> </p>
+							<!-- <input type="reset" value="Borrar" id = "borrar"> -->
+							<p>
+								<input type="button" hidden="hidden" value="Click me" onclick="aja();">
+							</p>
+						
+					</form>
+				</div>
+
+			</div>
+		</body>
+	</html>

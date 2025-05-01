@@ -1,0 +1,196 @@
+// Funciones para calcular los indicacdores :
+
+///ind_nr: indicador de blucles normaliza sobre 1 el número de veces que el usuario repinte estados numero de repetecienes encontrados en al tottalidad de la historia de juego
+/// ind_nri: indicador de blucles normaliza sobre 1 el número de veces que el usuario repite el estado de mayor repitencia.
+///ind_lb: normaliza sobre 1  la media de la longitud de los bucles
+/// ind_ramN: normaliza sobre el 1 las ramidicaciones del usuraio respescto de la ruta mas corta sigerida por el algoritmo de busqueda.
+/// ind_conf: normaliza sobre 1 el mayor numero de pasos del usuario que se adecuan a la ruta mas corta sugerida por el algortimo de busqueda.
+
+
+// let ruta_optima = [1, 2, 4, 7, 10, 12, 16, 20, 28, 31, 35, 40, 47, 52, 60, 71, 82, 84, 88, 92, 100, 105, 113, 122, 136, 140, 148, 157, 172, 180, 196, 212, 244, 247, 251, 256, 263, 268, 276, 287, 299, 304, 312, 322, 336, 347, 363, 384, 407, 412, 420, 431, 444, 454, 470, 490, 516, 527, 543, 564, 591, 612, 644, 687];
+var pila_bucle = 0;
+
+var metrica_RH =0;
+var metrica_BH = Infinity;
+var metrica_MOCH = 0;
+var RHS=[];
+var BHS=[];
+var MOCHS =[];
+var reset_RH= 0;
+var metrica_Regla0 = 0;
+
+
+function actualizar_partida()
+{
+  partida.push(numex+1);
+}
+
+function actualizar_reco_partida()
+{
+  reco_partida.push(reco);
+}
+
+function actualizar_ind_ram()
+{
+  compara_reco = reco_partida.length -2; 
+  compara_partida = partida.length-1;
+
+  if (partida[compara_partida] != reco_partida[compara_reco])
+  {
+    ind_ram = ind_ram + 1;
+    ind_ramN = ind_ram / (movsok+movsmal);
+  }
+}
+
+function actualizar_ind_nr()
+{ 
+  let aux_partida= partida;
+
+  for (let i = 0; i<aux_partida.length-1; i++)
+  {
+    if (numex+1 == aux_partida[i])
+    {
+      ind_nr = ind_nr+1;
+    }
+  }
+}
+
+function actualizar_ind_conf()
+{
+  compara_reco = reco_partida.length -2; 
+  compara_partida = partida.length-1;
+
+  if (partida[compara_partida] == reco_partida[compara_reco])
+  {
+    ind_conf = ind_conf + 1;
+  }
+  else 
+  {
+    rachas.push(ind_conf);
+    ind_conf=0; 
+  }
+}
+
+function RH() {
+  let incremento_rama = 1;
+  for (let i = 0; i < ruta_optima.length; i++)
+  {
+    if ((numex+1) == ruta_optima[i])
+    {
+      incremento_rama = 0;
+      metrica_RH =0;
+    }
+  }
+
+  for (let i = 0; i < partida.length; i++)
+  {
+    if ((numex+1) == partida[i])
+    {
+      incremento_rama = 0;
+    }
+  }
+
+  
+  
+  metrica_RH = metrica_RH + incremento_rama;
+  
+  
+  RHS.push(metrica_RH);
+}
+
+function BH()
+{
+  let tamano_bucle =Infinity;
+  for (let i = pila_bucle; i < partida.length; i++)
+  {
+    if ((numex+1) == partida[i])
+    {
+     // alert('Se cerró un bucle entre la jugada: '+ partida.length +' y la jugada:'+i);
+     tamano_bucle = (partida.length-i)-1;
+     pila_bucle = partida.length;    
+   }
+ }
+ metrica_BH = tamano_bucle;
+ BHS.push(metrica_BH);
+}
+
+function MOCH()
+{
+  if (partida[partida.length-1] == sug_inm[sug_inm.length -2])
+  { 
+   metrica_MOCH = metrica_MOCH +1;
+ }
+
+ else 
+ {
+  metrica_MOCH = 0;
+}
+MOCHS.push(metrica_MOCH);
+}
+
+function R0()
+
+{
+  if(movimientos_stack[movimientos_stack.length-1] == 0)
+  {
+metrica_Regla0 = 0
+  }
+  else {
+    metrica_Regla0 =1;
+  }
+}
+
+
+
+function difuso()
+{
+
+  var obj = {
+    crisp_input: [metrica_RH, metrica_BH, metrica_MOCH],
+    variables_input: [
+    {
+      name: "Ramificacion-metrica_RH",
+      setsName: ["Baja", "Media", "Exploratoria"],
+      sets: [
+      [0,0,3,5],
+      [3,5,15,30],
+      [15,30,40,40]
+      ]
+    },
+    {
+      name: "Bucle-metrica_BH",
+      setsName: ["Pequeño", "Medio", "Grande"],
+      sets: [
+      [0,0,0,4],
+      [0,4,6,10],
+      [6,10,30,30]
+      ]
+    },
+    {
+      name: "Mejores Opciones-metrica_MOCH",
+      setsName: ["Erratico", "Ubicado", "Consistente"],
+      sets: [
+      [0,0,0,4],
+      [0,4,30,50],
+      [30,50,100,100]
+      ]
+    }
+    ],
+    variable_output: {
+      name: "Desempeño",
+      setsName: ["Bajo", "Medio", "Alto"],
+      sets: [
+      [0,0,25,50],
+      [25,50,50,75],
+      [50,75,100,100]
+      ]
+    },
+    inferences: [
+    [2,0,1],
+    [0,1,2],
+    [0,1,2]
+    ]
+  };
+  var fl = new FuzzyLogic();
+  alert("Ramificación: "+RHS+"</br>" + "Bucle: "+BHS+"</br>" + "MOC: "+MOCHS+"</br>" + "Desempeño: "+fl.getResult(obj));
+}
