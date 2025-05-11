@@ -1,8 +1,11 @@
 <?php
-      #mysqli_connect(servidor,usuario,contraseña,basededatos)
-$username = "u573036680_john"; // Revisar en la configuración de la base de datos
-$password = "n+S4N&8L>L"; // Revisar en la configuración de la base de datos
-$dbname = "u573036680_escalera2";  //Revisar en la configuración de la base de datos
-$conex =mysqli_connect("localhost",$username ,$password,$dbname);
+# mysqli_connect(servidor, usuario, contraseña, basededatos)
+$username = "debian-sys-maint"; // Usuario de conexión (utiliza el correcto según el archivo de configuración)
+$password = "DRTe05kccpRBhTHg"; // Contraseña de conexión
+$dbname = "BD_escalera_2";  // Base de datos escalera_2
+$conex = mysqli_connect("localhost", $username, $password, $dbname);
 
+if (!$conex) {
+    die("Conexión fallida: " . mysqli_connect_error());
+}
 ?>

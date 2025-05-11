@@ -6,11 +6,10 @@ $_SESSION["id"] = uniqid();
 print "<p>El nombre es $_SESSION[nombre]</p>";
 print "<p>El id de sesion es $_SESSION[id]</p>";
 
-
-$servername = "localhost"; //El nombre FQDN del servidor donde corre el motor de base de datos, usualmente Localhost(mismo servidor donde correo PHO y almacenamos este archivo), pero puede usarse cualquiera al que se tenga acceso 
-$username = "id12924573_david"; // Revisar en la configuración de la base de datos
-$password = "1141Hanoi32020-"; // Revisar en la configuración de la base de datos
-$dbname = "id12924573_hanoi2";  //Revisar en la configuración de la base de datos
+$servername = "localhost"; // El nombre FQDN del servidor donde corre el motor de base de datos, usualmente Localhost
+$username = "debian-sys-maint"; // Usuario de conexión (puede ser diferente según lo que encuentres en tu sistema)
+$password = "DRTe05kccpRBhTHg"; // Contraseña que se encuentra en el archivo de configuración
+$dbname = "BD_8reinas";  // Base de datos a utilizar
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
