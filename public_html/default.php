@@ -16,7 +16,7 @@
             </div>
             <div class="cara cara2">
                 <span>
-                    <a href="/puzzle" rel="nofollow"><img src="inicio/imagenes/tran_puzzlev1.png"></a>
+                    <a href="/carrusel" rel="nofollow"><img src="inicio/imagenes/tran_puzzlev1.png"></a>
                 </span>
             </div>
         </div>
@@ -42,7 +42,7 @@
             </div>
             <div class="cara cara2">
                 <span>
-                    <a href="/escalera_v2" rel="nofollow"><img src="inicio/imagenes/tran_escalerav2.png"></a>
+                    <a href="/Juegos-matematicos/public_html/escaleraV3" rel="nofollow"><img src="inicio/imagenes/tran_escalerav2.png"></a>
                 </span>
             </div>
         </div>
@@ -81,7 +81,7 @@
             </div>
             <div class="cara cara2">
                 <span>
-                    <a href="/graficar" rel="nofollow"><img src="inicio/imagenes/tran_graficar.png"></a>
+                    <a href="/Graficar" rel="nofollow"><img src="inicio/imagenes/tran_graficar.png"></a>
                 </span>
             </div>
         </div>
