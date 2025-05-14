@@ -1,0 +1,11 @@
+*{
+padding: 0;
+font-family: century gothic;
+text-align: center;
+}
+
+body{
+    background: url('../images/fondo_reinas.png') no-repeat 0px 0px;
+    background-size: cover;
+}
+
