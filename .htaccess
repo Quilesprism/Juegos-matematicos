@@ -1,0 +1,22 @@
+RewriteEngine On
+
+# Redirigir /puzzle a la carpeta puzzle
+RewriteRule ^puzzle/?$ /puzzle/index.php [L]
+
+# Redirigir /puzzle_sin_color a la carpeta puzzle_sin_color
+RewriteRule ^puzzle_sin_color/?$ /puzzle_sin_color/index.php [L]
+
+# Redirigir /escalera a la carpeta escalera
+RewriteRule ^escalera/?$ /escalera/index.php [L]
+
+# Redirigir /escalera_v2 a la carpeta escalera_v2
+RewriteRule ^escalera_v2/?$ /escalera_v2/index.php [L]
+
+# Redirigir /hanoi a la carpeta hanoi
+RewriteRule ^hanoi/?$ /hanoi/index.php [L]
+
+# Redirigir /graficar a la carpeta graficar
+RewriteRule ^graficar/?$ /graficar/index.php [L]
+
+# Redirigir /reinas a la carpeta reinas
+RewriteRule ^reinas/?$ /reinas/index.php [L]

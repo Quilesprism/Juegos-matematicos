@@ -18,11 +18,11 @@ if ($conex->connect_error) {
   die("La conexión falló: " . $conex->connect_error);
 }
 
-$query = "SELECT Jugadores.uid, nombre, institucion, edad, pais,pregunta_1,pregunta_2,pregunta_3,pregunta_4,pregunta_5,pregunta_6,fecha_hora, intento,movimiento,trayectoria
-          FROM Jugadores 
-          inner join cuestionario ON Jugadores.uid = cuestionario.uid
-          inner join Movimientos ON Jugadores.uid = Movimientos.id
-          WHERE Jugadores.uid = '$ident'";
+$query = "SELECT jugadores.uid, nombre, institucion, edad, pais,pregunta_1,pregunta_2,pregunta_3,pregunta_4,pregunta_5,pregunta_6,fecha_hora, intento,movimiento,trayectoria
+          FROM jugadores 
+          inner join cuestionario ON jugadores.uid = cuestionario.uid
+          inner join Movimientos ON jugadores.uid = Movimientos.id
+          WHERE jugadores.uid = '$ident'";
 $result = $conex->query($query);
 
 if ($result->num_rows > 0) {

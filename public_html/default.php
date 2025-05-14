@@ -42,7 +42,7 @@
             </div>
             <div class="cara cara2">
                 <span>
-                    <a href="/escalera_v2" rel="nofollow"><img src="inicio/imagenes/tran_escalerav2.png"></a>
+                    <a href="/escalera_v3" rel="nofollow"><img src="inicio/imagenes/tran_escalerav2.png"></a>
                 </span>
             </div>
         </div>
