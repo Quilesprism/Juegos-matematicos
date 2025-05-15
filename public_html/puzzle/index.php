@@ -10,7 +10,7 @@
 <body>
     <div class="formulario">
   
-    <form action="servicios/insercion_Usuario_puzzle.php" method="post">
+    <form action="/puzzle/servicios/insercion_Usuario_puzzle.php" method="post">
       <div>
         <img class=ud src="images/logoUD.png"/>
          <img class=met src="images/logoMet2.png"/>

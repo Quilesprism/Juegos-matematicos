@@ -11,11 +11,11 @@
   <div class="formulario">
       
   
-    <form action="servicios/insercion_Usuario_puzzle_sin_color.php" method="post">
+  	<form action="/puzzle_sin_color/servicios/insercion_Usuario_puzzle_sin_color.php" method="post">
       <div>
-        <img class=ud src="images/logoUD.png"/>
-         <img class=met src="images/logoMet2.png"/>
-      </div>   
+        <img class="ud" src="images/logoUD.png" />
+        <img class="met" src="images/logoMet2.png" />
+      </div>
 
       <div class="campos">
         <h1>¡Registrate!</h1>

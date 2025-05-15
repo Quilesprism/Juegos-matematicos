@@ -10,10 +10,12 @@
 <body>
     <div class="formulario">
   
-    <form action="servicios/insercion_Usuario_8reinas.php" method="post">
+    <form action="/reinas/servicios/insercion_Usuario_8reinas.php" method="post">
+
       <div>
-        <img class=ud src="images/logoUD.png"/>
-         <img class=met src="images/logoMet2.png"/>
+      <link rel="stylesheet" href="/reinas/css/estilo.css">
+		<img src="/reinas/images/logoUD.png" />
+
       </div>   
 
       <div class="campos">
