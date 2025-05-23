@@ -7,20 +7,8 @@
     <link rel="stylesheet" href="inicio/css/estilo_pag_principal.css">
 </head>
 <body>
-    <div class="contenedorg">
-        <div class="contenedor">
-            <div class="cara cara1">
-                <span>
-                    <img src="inicio/imagenes/boton_puzzlev1.png">
-                </span>
-            </div>
-            <div class="cara cara2">
-                <span>
-                    <a href="/carrusel/index.php" rel="nofollow"><img src="inicio/imagenes/tran_puzzlev1.png"></a>
-                </span>
-            </div>
-        </div>
 
+    <div class="contenedorg">
         <div class="contenedor">
             <div class="cara cara1">
                 <span>
@@ -29,7 +17,7 @@
             </div>
             <div class="cara cara2">
                 <span>
-                    <a href="/puzzle_sin_color" rel="nofollow"><img src="inicio/imagenes/tran_puzzlev2.png"></a>
+                    <a href="/puzzle" rel="nofollow"><img src="inicio/imagenes/tran_puzzlev2.png"></a>
                 </span>
             </div>
         </div>
@@ -37,16 +25,12 @@
         <div class="contenedor">
             <div class="cara cara1">
                 <span>
-                    <img src="inicio/imagenes/boton_escalerav2.png">
+                    <img src="inicio/imagenes/boton_puzzlev1.png">
                 </span>
             </div>
             <div class="cara cara2">
                 <span>
-
-                    <a href="/escaleraV3/index.php" rel="nofollow"><img src="inicio/imagenes/tran_escalerav2.png"></a>
-
-                    <a href="/Juegos-matematicos/public_html/escaleraV3" rel="nofollow"><img src="inicio/imagenes/tran_escalerav2.png"></a>
-
+                    <a href="/puzzle_sin_color" rel="nofollow"><img src="inicio/imagenes/tran_puzzlev1.png"></a>
                 </span>
             </div>
         </div>
@@ -59,7 +43,24 @@
             </div>
             <div class="cara cara2">
                 <span>
-                    <a href="/escalera" rel="nofollow"><img src="inicio/imagenes/tran_escalerav1.png"></a>
+
+                    <a href="/escaleraV3/index.php" rel="nofollow"><img src="inicio/imagenes/tran_escalerav1.png"></a>
+
+                    <a href="/Juegos-matematicos/public_html/escaleraV3" rel="nofollow"><img src="inicio/imagenes/tran_escalerav2.png"></a>
+
+                </span>
+            </div>
+        </div>
+
+        <div class="contenedor">
+            <div class="cara cara1">
+                <span>
+                    <img src="inicio/imagenes/boton_escalerav2.png">
+                </span>
+            </div>
+            <div class="cara cara2">
+                <span>
+                    <a href="/escalera_v2" rel="nofollow"><img src="inicio/imagenes/tran_escalerav2.png"></a>
                 </span>
             </div>
         </div>

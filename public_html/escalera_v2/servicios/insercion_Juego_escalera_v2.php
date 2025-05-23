@@ -23,7 +23,7 @@ $intento = $_POST["Intento"];
 $numeroBloque = $_POST["Numero_de_Bloques"];
 
 
-$sql = "INSERT INTO Juegos (id_jugador,Numero_de_Bloques, Intento, Estado)
+$sql = "INSERT INTO juegos (id,Numero_de_Bloques, Intento, Estado)
                     VALUES ('$id','$numeroBloque','$intento','$estadoActual')";
 
 if ($conex->query($sql) === TRUE) {

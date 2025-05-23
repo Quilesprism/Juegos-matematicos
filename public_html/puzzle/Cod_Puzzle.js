@@ -15,6 +15,7 @@ let alto;
 let cnv;
 
 function setup() {
+
     ancho=windowWidth;
     alto=windowHeight;
  // var cnv = createCanvas(windowWidth, windowHeight);
@@ -329,6 +330,7 @@ function moverArribaAbajoCubo(Xsel,Ysel,Xsol,seleccionado,cero){
 }
 
 function mandarvector(){
+
   numcuadro=0;
   var vectorestado = new Array();
 
@@ -342,15 +344,19 @@ function mandarvector(){
   }
   vectorestado=vectorestado.join(',');
   print(vectorestado);
+  console.log(vectorestado);
   //vectordb.push(vectorestado);
   //guardar_estado();
    let uid = $("#uid").text();
 //let gid = $("#gid").text();
 
-	$.post("servicios/insercion_Juego_puzzle.php", {uid : uid, Estado: vectorestado.toString()} )
-	.done(function( data ) {
-		//alert( "Data Loaded: " + data );
-	});
+$.post("servicios/insercion_Juego_puzzle.php", { uid: uid, Estado: vectorestado.toString() })
+    .done(function(data) {
+        console.log("Respuesta del servidor:", data);
+    })
+    .fail(function(error) {
+        console.error("Error en la petición:", error);
+    });
 
 }
 

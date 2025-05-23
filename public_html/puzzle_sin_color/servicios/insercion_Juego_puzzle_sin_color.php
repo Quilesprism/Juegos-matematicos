@@ -20,7 +20,7 @@ $estadoActual = $_POST["Estado"];
 
 
 
-$sql = "INSERT INTO Movimientos (id_jugador , Estado)
+$sql = "INSERT INTO movimientos (id_jugador , estado)
 VALUES ('$id_jugador', '$estadoActual')";
 
 if ($conex->query($sql) === TRUE) {

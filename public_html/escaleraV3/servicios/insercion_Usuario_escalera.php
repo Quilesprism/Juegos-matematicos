@@ -23,7 +23,7 @@ $edad = $_POST["edad"];
 $pais = $_POST["pais"];
 $institucion = $_POST["institucion"];
 
-$sql = "INSERT INTO jugadores (uid, nombre, correo, edad, pais, institucion) VALUES (?, ?, ?, ?, ?, ?)";
+$sql = "INSERT INTO Jugadores (uid, nombre, correo, edad, pais, institucion) VALUES (?, ?, ?, ?, ?, ?)";
 $stmt = $conex->prepare($sql);
 
 if ($stmt === false) {

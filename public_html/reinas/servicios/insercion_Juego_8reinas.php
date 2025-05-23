@@ -19,7 +19,7 @@ $intento = $_POST["intento"];
 
 
 
-$sql = "INSERT INTO Movimientos (id_jugador , intento, vector)
+$sql = "INSERT INTO movimientos (id_jugador , intento, vector)
 VALUES ('$id_jugador', '$intento','$estadoActual')";
 
 if ($conex->query($sql) === TRUE) {

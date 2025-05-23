@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro 8 Reinas</title>
+    <base href="/reinas/">
     <link rel="stylesheet"  href="css/estilo.css">
 </head>
 <body>
@@ -12,11 +13,10 @@
   
     <form action="/reinas/servicios/insercion_Usuario_8reinas.php" method="post">
 
-      <div>
-      <link rel="stylesheet" href="/reinas/css/estilo.css">
-		<img src="/reinas/images/logoUD.png" />
-
-      </div>   
+     <div>
+        <img class=ud src="images/logoUD.png"/>
+         <img class=met src="images/logoMet2.png"/>
+      </div>    
 
       <div class="campos">
         <h1>¡Registrate!</h1>
@@ -279,8 +279,8 @@
         <p>Genero</p>
 
 				<select name="genero" id=genero>
-					<option value="Femenino">Femenino</option>
-					<option value="Masculino">Masculino</option>
+					<option value="F">Femenino</option>
+					<option value="M">Masculino</option>
 				</select>
         
 

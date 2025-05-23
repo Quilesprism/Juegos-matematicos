@@ -41,7 +41,7 @@ $ident=$_SESSION['uid'];
 
  
 
-<!-- <img scr="http://juegosmatematicos.online/puzzle/images/logo-ud.png"> -->
+<!-- <img scr="http://juegosmatematicos.acacia.red/puzzle/images/logo-ud.png"> -->
     <!-- </div> -->
 
     <!-- <div id ="contenido"> -->

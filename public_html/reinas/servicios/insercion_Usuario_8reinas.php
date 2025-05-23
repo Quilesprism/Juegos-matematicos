@@ -37,7 +37,7 @@ $correo=$_POST["correo"];
 
 
 
-$sql = "INSERT INTO Jugadores(uid,nombre,correo, edad, pais, genero,institucion)
+$sql = "INSERT INTO jugadores(uid,nombre,correo, edad, pais, genero,institucion)
 VALUES ('$uid','$nombre','$correo','$edad', '$pais', '$genero', '$institucion')";
 
 
