@@ -6,7 +6,7 @@
 
     $username = "u573036680_rafa";
     $password = "Escalera2021#";
-    $dbname = "BD_escalera_1";
+    $dbname = "u573036680_escalera";
 
     $conex = mysqli_connect("localhost", $username, $password, $dbname);
 
