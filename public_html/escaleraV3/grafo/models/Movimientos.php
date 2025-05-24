@@ -1,3 +1,4 @@
+
 <?php
 require_once __DIR__ . '/../config/db.php';
 
@@ -11,8 +12,8 @@ class Movimientos {
     }
 
     public function obtenerMovimientos() {
-        $query = "
-         SELECT
+    $query = "
+       SELECT
     n.tipo AS NODO,
     j.nombre AS estudiante,
     j.uid AS id_estudiante,
@@ -27,15 +28,26 @@ class Movimientos {
     m.movimiento,
     m.trayectoria
 FROM
-    NODO n
+    nodos n
 LEFT JOIN
     cuestionario c ON n.id_nodo = c.id_nodo
 LEFT JOIN
-    Jugadores j ON c.uid = j.uid
+    jugadores j ON c.uid = j.uid
 LEFT JOIN
     movimientos m ON m.id = j.uid
 WHERE
     n.tipo IN ('jugador')
+    AND j.nombre IS NOT NULL
+    AND j.uid IS NOT NULL
+    AND c.Pregunta_1 IS NOT NULL
+    AND c.Pregunta_2 IS NOT NULL
+    AND c.Pregunta_3 IS NOT NULL
+    AND c.Pregunta_4 IS NOT NULL
+    AND c.Pregunta_5 IS NOT NULL
+    AND c.Pregunta_6 IS NOT NULL
+    AND m.intento IS NOT NULL
+    AND m.movimiento IS NOT NULL
+    AND m.trayectoria IS NOT NULL
 GROUP BY
     m.movimiento,
     m.trayectoria,
@@ -43,13 +55,12 @@ GROUP BY
     n.tipo, 
     j.nombre;
 
- 
-        ";
+    ";
 
-        $stmt = $this->conn->prepare($query);
-        $stmt->execute();
+    $stmt = $this->conn->prepare($query);
+    $stmt->execute();
 
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
-    }
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
 }
 ?>

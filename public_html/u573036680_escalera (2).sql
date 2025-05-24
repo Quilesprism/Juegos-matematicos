@@ -1,3 +1,4 @@
+
 -- phpMyAdmin SQL Dump
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
@@ -20,11 +21,10 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `u573036680_escalera`
 --
-CREATE DATABASE IF NOT EXISTS `u573036680_escalera` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `u573036680_escalera`;
-
 -- --------------------------------------------------------
 
+
+USE u573036680_escalera;
 --
 -- Estructura de tabla para la tabla `cuestionario`
 --

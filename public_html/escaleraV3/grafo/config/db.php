@@ -1,7 +1,7 @@
 <?php
 class Database {
-    private $host = '127.0.0.1';
-    private $db_name = 'BD_escalera_1';
+    private $host = 'localhost';
+    private $db_name = 'u573036680_escalera';
     private $username = 'u573036680_rafa'; 
     private $password = 'Escalera2021#';     
     public $conn;

@@ -19,7 +19,7 @@ $trayectoria=$_POST["trayectoria"];
 
 
 
-$sql = "INSERT INTO Movimientos (id,  intento, movimiento, trayectoria)
+$sql = "INSERT INTO movimientos (id,  intento, movimiento, trayectoria)
 VALUES ('$id', '$intento', '$movimiento', '$trayectoria')";
 
 if ($conex->query($sql) === TRUE) {

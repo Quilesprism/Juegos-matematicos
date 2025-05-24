@@ -17,7 +17,7 @@ if (isset($_POST['jugar'])) {
     }
 
     // AJUSTADO: tabla "NODOS"
-    $sql_nodo = "INSERT INTO NODOS(id_nodo, tipo, descripcion) VALUES (NULL, ?, ?)";
+    $sql_nodo = "INSERT INTO nodos(id_nodo, tipo, descripcion) VALUES (NULL, ?, ?)";
     $stmt_nodo = $conex->prepare($sql_nodo);
 
     if ($stmt_nodo === false) {
